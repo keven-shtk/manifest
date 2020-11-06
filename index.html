@@ -6,6 +6,18 @@
     <title>Busca</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="manifest" href="manifest.json">
+
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener('load', function(){
+          navigator.serviceWorker.register('sw.js').then(function(registration) {
+            console.log('Service Worker registrado com sucesso, com escopo: ', registration.scopo)
+           }, function(err){
+                console.log('Erro ao registrar o Service Worker:'. err)
+          })
+        })
+      }
+  </script>
 </head>
 <body>
     <div class="container-fluid ">
