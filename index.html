@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="manifest" href="manifest.json">
+
+    <script>
+        if ("serviceWorker" in navigator) {
+            if (navigator.serviceWorker.controller) {
+                console.log("[Aplicativo] funcionário de serviço ativo encontrado, não há necessidade de registrar");
+            } else {
+                navigator.serviceWorker
+                .register("./sw.js", {
+                    scope: "./"
+                })
+                .then(function(reg) {
+                    console.log("[Aplicativo] O trabalhador do serviço foi registrado para o escopo: " + reg.scope);
+                });
+            }
+        }
+  </script>
+</head>
+<body>
+    <div class="container-fluid ">
+        <div class="col-12">
+            <div class="row justify-content-center">
+                <h2 class="text-center">Buscador de endereço</h2>
+            </div>
+        </div>
+
+        
+            <form class="form-inline justify-content-center">
+        <div class="form-group mx-sm-3 mb-2">
+                <label>Informe CEP  </label>
+                <input type="email" name="CEP" id="CEP" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary btn-find mb-2">Pesquisar</button>
+      </form> 
+
+           <form>  
+               <div class="row justify-content-center">
+                   <div class="col-6">
+          <fieldset disabled>
+              <div class="form-group">
+                <label >Longradouro</label>
+                <input type="text" name="longradouro" id="longradouro" class="form-control">
+              </div>
+           </fieldset>
+                   </div>
+            <div class="form-group">
+              <label>Número</label>
+              <input type="text" name="numero" id="numero"class="form-control" >
+            </div>
+               </div>
+        
+            <div class="row justify-content-center"> 
+                <div class="col-5">
+            <fieldset disabled> 
+            <div class="form-group">
+                          <label>Bairro</label>
+                          <input type="text" name="bairro" id="bairro" class="form-control" >
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="col-3">
+                          <div class="form-group">
+                            <label>Complemento</label>
+                            <input type="text" name="complemento" id="complemento" class="form-control">
+                          </div>
+                      </div>
+                 </div>
+
+              <fieldset disabled> 
+                <div class="row justify-content-center">
+                    <div class="col-7">
+                          <div class="form-group">
+                <label>Localidade</label>
+                <input type="text"  name="localidade"id="localidade" class="form-control">
+              </div>
+                    </div>
+              <div class="form-group">
+                <label>Estado</label>
+                <input type="text" name="uf" id="uf" class="form-control col-4">
+              </div>
+            </div>
+              </fieldset>
+            
+          </form>
+    </div>
+
+    <script src="js/jquery-3.4.1.js"> </script>
+    <script src="js/bootstrap.js"> </script>
+    <script src="js/js.js"> </script>
+</body>
+</html>
