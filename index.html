@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula Jquery</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/css.css">
+    <link rel="manifest" href="manifest.json">
+
+    <script>
+       if ("serviceWorker" in navigator) {
+            if (navigator.serviceWorker.controller) {
+                console.log("[Aplicativo] funcionário de serviço ativo encontrado, não há necessidade de registrar");
+            } else {
+                navigator.serviceWorker
+                    .register("./sw.js", {
+                        scope: "./"
+                    })
+                    .then(function(reg) {
+                        console.log("[Aplicativo] O trabalhador do serviço foi registrado para o escopo: " + reg.scope);
+                    });
+            }
+        }
+    </script>
+</head>
+<body>
+    
+    <button class="nav-bar btn btn-outline-primary">Menu</button>
+    <button class="btn btn-outline-primary" id="btn-s">Sextouuu</button>
+
+    <div class="menu">
+    <button class="btn btn-outline-primary" id="btn-m">Mostrar Imagem</button>
+    <button class="btn btn-outline-primary" id="btn-e">Esconder Imagem</button>
+    <br>
+    <button class="btn btn-outline-primary" id="btn-1-5em">Aumentar Fonte para 1.5</button>
+    <button class="btn btn-outline-primary" id="btn-2-0em">Aumentar Fonte para 2.0</button>
+    <button class="btn btn-outline-primary" id="btn-2-5em">Aumentar Fonte para 2.5</button>
+
+    </div>
+   <br>
+   <br>
+
+    <img src="img/img1.jpg" alt="Programmed" class="imagem">
+     <br>
+     <br>
+
+    <div class="musica"> 
+       
+
+        <marquee direction="left"><h1>SEXTOUUUU 😎😎😎 SEXTOUUUU</h1></marquee><br>
+        <marquee direction="right"><h1>SEXTOUUUU 😎😎</h1></marquee>
+
+        <audio controls loop>
+             <source src="Del Rey Ligado.mp3" autoplay type="audio/mpeg" class="audio">
+         </audio> <br>
+
+         <img src="img/img6.gif" alt="Programmed" class="imagem2">
+         <img src="img/img7.gif" alt="Programmed" class="imagem2">
+         <img src="img/img12.gif" alt="Programmed" class="imagem3">
+         <img src="img/img8.gif" alt="Programmed" class="imagem2">
+         <img src="img/img9.gif" alt="Programmed" class="imagem3">
+         <img src="img/img10.gif" alt="Programmed" class="imagem2">
+         <img src="img/img11.gif" alt="Programmed" class="imagem3">
+         
+    </div>
+        
+    <div class="extra"><h4>💎Aviso💎</h4>
+    <h5>O botão Sextouuu deve ser apertado no final de sua experiência aqui!!! Ok? </h5> 
+    </div>
+
+     <p class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+         Similique reiciendis sint itaque dicta tempore quae nobis officia at 
+        voluptatem sit excepturi, unde est, accusamus dolores minima, cupiditate 
+        quam ducimus sunt? Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+        Nulla inventore velit non doloribus. Nulla, iure quae minus odio repellendus
+        quis repellat consectetur labore aliquam autem eligendi perspiciatis eum ad dolores.
+        </p>
+
+    
+    <script src="js/jquery-3.4.1.js"> </script>
+    <script src="js/bootstrap.js"> </script>
+    <script src="js/js.js"> </script>
+</body>
+</html>
