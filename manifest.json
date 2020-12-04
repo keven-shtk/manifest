@@ -1,7 +1,12 @@
 {
-    "nome": "Buscador de Código Postal",
-    "short_name": "Busca CEP",
-    "start_url": "index.html",
+    "name": "APP ",
+    "short_name": "Cep",
+    "description": "APP ",
+    "lang": "pt-BR",
+    "start_url": "./",
+    "scope": "./?",
+    "display": "fullscreen",
+    "theme_color": "red",
     "icons": [
         {
             "src": "img/icon48.png",
@@ -35,8 +40,6 @@
         }
 
     ],
-    "theme-color": "#s1e90ff",
-    "background-color": "#fff",
-    "display":"fullscreen",
-    "oriwntation": "any"
+
+    "background-color": "#fff"
 }
